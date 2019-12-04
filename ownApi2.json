@@ -1,0 +1,16 @@
+{
+  "burger": 510,
+  "vetBurger": 35.8,
+  "tomaat": 6,
+  "vetTomaat": 0.1,
+  "salade": 6,
+  "vetSalade": 0.1,
+  "tomaatANDsla": 522,
+  "vettomaatANDsla": 36,
+  "kaas": 74,
+  "vetKaas": 3.6,
+  "ketchup": 13,
+  "vetKetchup": 0,
+  "brood": 122,
+  "vetBrood": 0.8
+}

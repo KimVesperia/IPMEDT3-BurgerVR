@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="javaTest2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="jquery.js"></script>
+    <title></title>
+  </head>
+  <body>
+
+    <a-scene id="scene" ><!--stats -->
+      <a-assets>
+        <img id="ceilingImg" src="ceiling.jpg">
+        <img id="wallImg" src="kitchen_wall.jpg">
+        <img id="vloerImg" src="vloer2.jpeg">
+        <img id="wallImg2" src="wall2.jpeg">
+
+        <a-asset-item id="snijplank5-obj" src="obj/snijplank5.obj"></a-asset-item>
+        <a-asset-item id="snijplank5-mtl" src="obj/snijplank5.mtl"></a-asset-item>
+
+        <a-asset-item id="peper-obj" src="obj/peper.obj"></a-asset-item>
+        <a-asset-item id="peper-mtl" src="obj/peper.mtl"></a-asset-item>
+
+        <a-asset-item id="zout-obj" src="obj/zout.obj"></a-asset-item>
+        <a-asset-item id="zout-mtl" src="obj/zout.mtl"></a-asset-item>
+
+        <a-asset-item id="fridge-obj" src="obj/fridge.obj"></a-asset-item>
+        <a-asset-item id="fridge-mtl" src="obj/fridge.mtl"></a-asset-item>
+
+        <a-asset-item id="koelKastKastobj-obj" src="obj/koelKastKastobj.obj"></a-asset-item>
+        <a-asset-item id="koelKastKastobj-mtl" src="obj/koelKastKastobj.mtl"></a-asset-item>
+
+        <a-asset-item id="koelkastDeur-obj" src="obj/koelkastDeur.obj"></a-asset-item>
+        <a-asset-item id="koelkastDeur-mtl" src="obj/koelkastDeur.mtl"></a-asset-item>
+
+        <a-asset-item id="keukenhanger-obj" src="obj/keukenhanger.obj"></a-asset-item>
+        <a-asset-item id="keukenhanger-mtl" src="obj/keukenhanger.mtl"></a-asset-item>
+
+        <a-asset-item id="burgerRauw-obj" src="obj/burgerRauw.obj"></a-asset-item>
+        <a-asset-item id="burgerRauw-mtl" src="obj/burgerRauw.mtl"></a-asset-item>
+
+        <a-asset-item id="tv-obj" src="obj/tv.obj"></a-asset-item>
+        <a-asset-item id="tv-mtl" src="obj/tv.mtl"></a-asset-item>
+
+        <a-asset-item id="werkbankRechts-obj" src="obj/werkbankRechts.obj"></a-asset-item>
+        <a-asset-item id="werkbankRechts-mtl" src="obj/werkbankRechts.mtl"></a-asset-item>
+
+        <a-asset-item id="werkbankLinks-obj" src="obj/werkbankLinks.obj"></a-asset-item>
+        <a-asset-item id="werkbankLinks-mtl" src="obj/werkbankLinks.mtl"></a-asset-item>
+
+        <a-asset-item id="tafel-obj" src="obj/tafel.obj"></a-asset-item>
+        <a-asset-item id="tafel-mtl" src="obj/tafel.mtl"></a-asset-item>
+
+        <a-asset-item id="stoel-obj" src="obj/stoel.obj"></a-asset-item>
+        <a-asset-item id="stoel-mtl" src="obj/stoel.mtl"></a-asset-item>
+
+        <a-asset-item id="snijplank-obj" src="obj/snijplank.obj"></a-asset-item>
+        <a-asset-item id="snijplank-mtl" src="obj/snijplank.mtl"></a-asset-item>
+
+        <a-asset-item id="grill2-obj" src="obj/grill2.obj"></a-asset-item>
+        <a-asset-item id="grill2-mtl" src="obj/grill2.mtl"></a-asset-item>
+
+        <a-asset-item id="spatel-obj" src="obj/spatel.obj"></a-asset-item>
+        <a-asset-item id="spatel-mtl" src="obj/spatel.mtl"></a-asset-item>
+
+        <a-asset-item id="burgerGebakken-obj" src="obj/burgerGebakken.obj"></a-asset-item>
+        <a-asset-item id="burgerGebakken-mtl" src="obj/burgerGebakken.mtl"></a-asset-item>
+
+        <a-asset-item id="broodjeBovenkant-obj" src="obj/broodjeBovenkant.obj"></a-asset-item>
+        <a-asset-item id="broodjeBovenkant-mtl" src="obj/broodjeBovenkant.mtl"></a-asset-item>
+
+        <a-asset-item id="broodjeOnderkant-obj" src="obj/broodjeOnderkant.obj"></a-asset-item>
+        <a-asset-item id="broodjeOnderkant-mtl" src="obj/broodjeOnderkant.mtl"></a-asset-item>
+
+        <a-asset-item id="sla-obj" src="obj/sla.obj"></a-asset-item>
+        <a-asset-item id="sla-mtl" src="obj/sla.mtl"></a-asset-item>
+
+        <a-asset-item id="ui-obj" src="obj/ui.obj"></a-asset-item>
+        <a-asset-item id="ui-mtl" src="obj/ui.mtl"></a-asset-item>
+
+        <a-asset-item id="tomaat-obj" src="obj/tomaat.obj"></a-asset-item>
+        <a-asset-item id="tomaat-mtl" src="obj/tomaat.mtl"></a-asset-item>
+
+        <a-asset-item id="finalAlleenBurger-obj" src="obj/finalAlleenBurger.obj"></a-asset-item>
+        <a-asset-item id="finalAlleenBurger-mtl" src="obj/finalAlleenBurger.mtl"></a-asset-item>
+
+        <a-asset-item id="finalBurgerTomaat-obj" src="obj/finalBurgerTomaat.obj"></a-asset-item>
+        <a-asset-item id="finalBurgerTomaat-mtl" src="obj/finalBurgerTomaat.mtl"></a-asset-item>
+
+        <a-asset-item id="finalBurgerSla-obj" src="obj/finalBurgerSla.obj"></a-asset-item>
+        <a-asset-item id="finalBurgerSla-mtl" src="obj/finalBurgerSla.mtl"></a-asset-item>
+
+        <a-asset-item id="finalBurgerCompleet-obj" src="obj/finalBurgerCompleet.obj"></a-asset-item>
+        <a-asset-item id="finalBurgerCompleet-mtl" src="obj/finalBurgerCompleet.mtl"></a-asset-item>
+
+        <a-asset-item id="kaas-obj" src="obj/kaas.obj"></a-asset-item>
+        <a-asset-item id="kaas-mtl" src="obj/kaas.mtl"></a-asset-item>
+
+        <a-asset-item id="ui2-obj" src="obj/ui2.obj"></a-asset-item>
+        <a-asset-item id="ui2-mtl" src="obj/ui2.mtl"></a-asset-item>
+
+        <a-asset-item id="gehakt-obj" src="obj/gehakt.obj"></a-asset-item>
+        <a-asset-item id="gehakt-mtl" src="obj/gehakt.mtl"></a-asset-item>
+
+        <a-asset-item id="vleeshamer-obj" src="obj/vleeshamer.obj"></a-asset-item>
+        <a-asset-item id="vleeshamer-mtl" src="obj/vleeshamer.mtl"></a-asset-item>
+
+        <a-asset-item id="mes-obj" src="obj/mes.obj"></a-asset-item>
+        <a-asset-item id="mes-mtl" src="obj/mes.mtl"></a-asset-item>
+
+        <a-asset-item id="peterselie-obj" src="obj/peterselie.obj"></a-asset-item>
+        <a-asset-item id="peterselie-mtl" src="obj/peterselie.mtl"></a-asset-item>
+
+
+      </a-assets>
+
+      <a-sphere id="bol" radius="0.1" position="3.111 1.15 -7.65" visible="false" color="purple"></a-sphere>
+
+      <a-sphere id="reset" radius="0.05" position="4.89 1.1 -9.579" color="red"></a-sphere>
+      <a-box id="reset2" position="4.95 1.104 -9.585" scale="0.15 0.1 0.15" rotation="0 0 90"></a-box>
+      <a-entity id="textReset" rotation="0 -90 0" text="value: Reset; color: black" position="5.532 1.118 -9.505" scale="1 1 1"></a-entity>
+
+      <a-entity id="meatWrapper" beweeg="position: 1.1 1.6 -6.75" >
+        <a-entity id="meat" scale="0.3 0.3 0.3" rotation="0 90 180" position="-0.381 0.95 -7.7" obj-model="obj: #gehakt-obj; mtl: #gehakt-mtl"></a-entity>
+      </a-entity>
+
+  <!-- <a-sphere id="plane1" src="moveHere.jpg" color="gold" opacity=".3" radius=".2" position="-0.10 1.6 -6.75" beweeg="position: 0 1.6 -6.75"></a-sphere> -->
+      <a-entity id="peterWrapper">
+          <a-entity id="peter" color="green" scale="0.03 0.03 0.03" rotation="-30 180 90" position="1.232 1.066 -7.661" obj-model="obj: #peterselie-obj; mtl: #peterselie-mtl"></a-entity>
+        </a-entity>
+
+      <a-entity id="mesWrapper">
+        <a-box id="mesBox" width = "0" height = "0">
+          <a-entity id="mes" scale="0.030 0.030 0.030" rotation="0 0 270" position="1.352 1.460 -7.885" obj-model="obj: #mes-obj; mtl: #mes-mtl"></a-entity>
+        </a-box>
+      </a-entity>
+
+      <a-entity id="hamerWrapper">
+        <a-entity id="hamer" scale="0.05 0.05 0.05" rotation="180 270 90" position="1.624 1.615 -7.778" height=".1" obj-model="obj: #vleeshamer-obj; mtl: #vleeshamer-mtl"></a-entity>
+      </a-entity>
+
+      <a-entity id="uiWrapper">
+        <a-entity id="ui" scale="0.2 0.2 0.2" position="0.799 1.136 -7.665" height=".1" obj-model="obj: #ui-obj; mtl: #ui-mtl"></a-entity>
+      </a-entity>
+
+      <a-entity id="textPepper" text="value: Peper; color: green" position="1.299 1.297 -7.746" scale="1 1 1"></a-entity>
+      <a-entity id="textZout" text="value: Zout; color: green" position="1.496 1.297 -7.746" scale="1 1 1"></a-entity>
+
+
+      <a-entity id="peperWrapper">
+        <a-entity id="peper" scale="0.5 0.5 0.5" position="0.85 1.375 -7.85" height=".1" obj-model="obj: #peper-obj; mtl: #peper-mtl"></a-entity>
+      </a-entity>
+
+      <a-entity id="zoutWrapper">
+        <a-entity id="zout" scale="0.5 0.5 0.5" position="1.05 1.375 -7.85" height=".1" obj-model="obj: #zout-obj; mtl: #zout-mtl"></a-entity>
+      </a-entity>
+
+      <a-entity id="broodjeOnderkantWrapper">
+        <a-entity id="broodjeOnderkant" scale=".11 .11 .11" position="3.113 1.104 -7.65" color="brown" height=".1" obj-model="obj: #broodjeOnderkant-obj; mtl: #broodjeOnderkant-mtl"></a-entity>
+      </a-entity>
+
+      <a-entity id="kaaswrapper">
+        <a-entity id="kaasModel" scale=".07 .07 .07" position="3 1.060 -7.3"  height=".1" obj-model="obj: #kaas-obj; mtl: #kaas-mtl"></a-entity>
+      </a-entity>
+
+      <a-entity id="burgerwrapper" beweeg="position: 3.5 1.6 -6.75">
+        <a-entity id="burgerModel" visible="false" scale=".10 .10 .10" position="1.942 1.08 -7.65" color="blue" height=".15" obj-model="obj: #burgerGebakken-obj; mtl: #burgerGebakken-mtl"></a-entity>
+      </a-entity>
+
+      <a-entity id="slaModelWrapper">
+        <a-entity id="slaModel" scale=".08 .11 .11" position="3.165 1.095 -7.446" color="green" height=".15" obj-model="obj: #sla-obj; mtl: #sla-mtl"></a-entity>
+      </a-entity>
+
+      <a-entity id="tomaatModelWrapper">
+        <a-entity id="tomaatModel" scale=".09 .09 .09" position="3.377 1.003 -7.446" color="red" height=".15" obj-model="obj: #tomaat-obj; mtl: #tomaat-mtl"></a-entity>
+      </a-entity>
+
+
+      <a-entity id="broodjeBovenkantWrapper">
+        <a-entity id="broodjeBovenkant" scale=".11 .11 .11" position="3.442 1.084 -7.65" color="brown" height=".15" obj-model="obj: #broodjeBovenkant-obj; mtl: #broodjeBovenkant-mtl"></a-entity>
+      </a-entity>
+
+      <a-entity camera look-controls wasd-controls="false"></a-entity>
+
+      <!-- <a-box id="plankHoog"
+          position= "3.593 1.3 -7.85"
+          rotation="0 0 0"
+          color="#FFBB70"
+          height = "0.03"
+          depth = ".25"
+          width = "0.8"
+          repeat = "">
+      </a-box> -->
+
+      <!-- <a-box id="plankLaag"
+      position= "0.85 1.3 -7.85"
+      rotation="0 0 0"
+      color="#FFBB70"
+      height = "0.03"
+      depth = ".25"
+      width = "0.8"
+      repeat = "">
+      </a-box> -->
+
+      <a-cylinder
+        id="buttonTemp"
+        radius="0.03"
+        height="0.2"
+        color="red"
+        rotation="90 0 0"
+        position="1.865 1.034 -7.429"
+      ></a-cylinder>
+
+      <a-plane color="teal" width=".15" height=".05" position="2.247 1.034 -7.347"></a-plane>
+      <a-text id="textFieldTemp" width=".7" height="0.7" position="2.247 1.034 -7.347" value="0"></a-text>
+
+      <a-entity id="snijplank" position = "-3.159 -1.093 -4.797"
+        scale="2 2 2"
+        rotation = "0 -90 0" obj-model="obj: #snijplank-obj; mtl: #snijplank-mtl"></a-entity>
+
+      <a-entity id="snijplank2" position = "-3.845 -0.553 -5.487"
+        scale="1.5 1.5 1.5"
+        rotation = "0 -90 0" obj-model="obj: #snijplank-obj; mtl: #snijplank-mtl"></a-entity>
+
+      <a-entity id="tvBox">
+      <a-entity id="tv" position = "3.149 2.060 -6.447"
+        width = "0"
+        height = "1.2"
+        depth = ".8"
+        scale="3.5 3.5 3.5"
+        rotation = "0 -90 0" obj-model="obj: #tv-obj; mtl: #tv-mtl"></a-entity></a-entity>
+
+
+
+      <a-entity id="werkbankLinks" position = "0.418 0 -6.18"
+        width = "5"
+        height = "1.2"
+        depth = ".8"
+        scale="1 1 1"
+        rotation = "0 -90 0" obj-model="obj: #werkbankLinks-obj; mtl: #werkbankLinks-mtl"></a-entity>
+
+      <a-entity id="grill2" position = "0.84 0 -7.395"
+        rotation = "0 -90 0"
+        scale="1 1 1"
+        width = "5"
+        depth = ".8"
+        height = "1.2"
+
+        obj-model="obj: #grill2-obj; mtl: #grill2-mtl"></a-entity>
+
+
+
+      <a-box id="airplane" scale="0.430 0.090 0.200" color="#FFBB70" position="0.950 1.293 -7.852" rotation=" 0 0 0"></a-box>
+      <a-plane id="recept1" scale="1 1 1" src="blackboard.jpg" position="1.232 2.249 -7.930" rotation=" 0 0 0"></a-plane>
+      <a-plane id="recept2" scale="1 .5 1" src="blackboard2.jpg" position="2.332 2.249 -7.930" rotation=" 0 0 0"></a-plane>
+      <a-entity id="textZeroHour" text="value: Deze burger bevat:; color: black" position="4.465 2.065 -7.924" scale="2.8 2.8 2.8"></a-entity>
+
+      <a-plane id="resetboard" scale="1 1 1" src="resethier.jpg" position="-2.5 3.249 -7.930"></a-plane>
+      <a-cylinder id="touw1" radius="0.01" height="1.5" position="-2.966 4.4 -7.976"></a-cylinder>
+      <a-cylinder id="touw2" radius="0.01" height="1.5" position="-2.1  4.4 -7.976"></a-cylinder>
+
+      <a-entity id="koelKast" position = "-0.12 -0.0 -7.70"
+          rotation = "0 90 0" scale="0.250 0.5 0.5" width = "15" height = "10" obj-model="obj: #koelKastKastobj-obj; mtl: #koelKastKastobj-mtl">
+          <a-sound src="fridge.mp3" autoplay="true" loop="true" volume="0.8"></a-sound></a-entity>
+
+      <a-box id="werkbank4" width = "0" height = "0">
+        <a-box id="plane4" color="yellow" sound="src: url(deurOpen.mp3); on: click" width = "0.1" height = "0.1" rotation ="90 180 0" position="0.22 1.3 -7.40"></a-box>
+        <a-box id="plane5" color="yellow" sound="src: url(deurOpen.mp3); on: click" width = "0.1" height = "0.1" position="0.3 1.3 -7.50" rotation="90 180 0"></a-box>
+        <a-entity id="koelKastDeur" position = "-0.12 -0.0 -7.50"
+          rotation = "0 90 0" scale="0.3 0.5 0.5" width = "15" height = "10" obj-model="obj: #koelkastDeur-obj; mtl: #koelkastDeur-mtl"></a-entity>
+      </a-box>
+
+      <a-entity id ="spatelcont" width ="0" height="0">
+            <a-box id="spatelbox" width = "0" height = "0">
+              <a-entity id="spatel"
+                position = "1.850 1.6 -7.90"
+                rotation = "0 -90 -90"
+                scale = "0.05 0.1 0.1"
+                obj-model="obj: #spatel-obj; mtl: #spatel-mtl"
+              ></a-entity>
+            </a-box>
+        </a-entity>
+
+        <a-entity id="keukenhanger"
+          position = "1.8 1.48 -7.95"
+          rotation = "0 -90 0"
+          scale = " 0.15 0.15 0.10"
+          obj-model="obj: #keukenhanger-obj; mtl: #keukenhanger-mtl"
+        ></a-entity>
+
+        <a-entity id="keukenhanger2"
+          position = "1.52 1.48 -7.95"
+          rotation = "0 -90 0"
+          scale = " 0.15 0.15 0.10"
+          obj-model="obj: #keukenhanger-obj; mtl: #keukenhanger-mtl"
+        ></a-entity>
+
+      <a-cylinder id="vlees"
+
+      position = "1.908 1.125 -7.65"
+      rotation = "0 -90 0"
+      scale = " 0.15 0.15 0.15"
+      opacity = "0.1"
+      color = "#FF7F7F"
+      height = ".2"
+      ></a-cylinder>
+
+        <a-entity id="tafel" position = "-1 -0.5 -1.8"
+          scale="1 1.5 1"
+          rotation = "0 -90 0"
+          obj-model="obj: #tafel-obj; mtl: #tafel-mtl">
+        </a-entity>
+
+        <a-entity id="stoel2">
+        <a-entity id="stoel" position = "6 -0.5 -4.5"
+          scale="1 1.5 1"
+          rotation = "0 90 0" obj-model="obj: #stoel-obj; mtl: #stoel-mtl">
+        </a-entity>
+      </a-entity>
+
+      <a-entity id="werkbankRechts" position = "-0.70 0 -6.18"
+        width = "5"
+        height = "1.2"
+        depth = ".8"
+        scale="1 1 1"
+        rotation = "0 -90 0" obj-model="obj: #werkbankRechts-obj; mtl: #werkbankRechts-mtl"></a-entity>
+
+      <a-plane
+        src="img/woodenFloor.jpeg"
+        repeat="8 8"
+        position="0 0 -6.18"
+        width="10"
+        height="10"
+        rotation="-90 0 0"
+      ></a-plane>
+
+      <a-plane
+        src="img/kleed.jpg"
+        repeat="8 8"
+        rotation="-90 -45 0"
+        position="-2 0.02 -3"
+        width="2.5"
+        height="2.5"
+        rotation="-90 0 0"
+      ></a-plane>
+
+      <a-plane
+        src="img/cityView.jpg"
+        repeat="1 1"
+        position="-7 1 -8"
+        width="20"
+        height="15"
+        rotation="0 90 0"
+      ><a-entity light="type: ambient; intensity: 0.3"></a-entity></a-plane>
+
+      <a-box
+        src="img/concreet.jpg"
+        repeat="2 3"
+        width=".6"
+        height="5"
+        position="-4.75 2.5 -1.67"
+      ></a-box>
+
+      <a-box
+        src="img/concreet.jpg"
+        repeat="2 3"
+        width=".6"
+        height="5"
+        position="-4.75 2.5 -5.67"
+      ></a-box>
+
+      <a-box
+        src="img/concreet.jpg"
+        repeat="2 3"
+        width=".6"
+        height="5"
+        position="-4.75 2.5 -10.67"
+      ></a-box>
+
+      <a-box
+        src="img/Backwall.jpg"
+        repeat="4 .6"
+        depth="10"
+        width="0.4"
+        height="1.2"
+        position="-4.75 0.6 -6.14"
+      ></a-box>
+
+      <a-box
+        src="img/Backwall.jpg"
+        repeat="4 .6"
+        depth="10"
+        width="0.4"
+        height="1.2"
+        position="-4.75 4.4 -6.140"
+      ></a-box>
+
+      <a-box
+        src="img/Plaster.jpg"
+        repeat="4 1.8"
+        color="silver"
+        depth="0.4"
+        width="10"
+        height="4"
+        position="0 2 -11"
+      ></a-box>
+
+      <a-plane
+        src="img/Plaster.jpg"
+        repeat="4 1.8"
+        color="#516fa0"
+        position="0 2.5 -11"
+        width="11"
+        height="5"
+        rotation="0 0 0"
+      ></a-plane>
+
+      <a-plane
+        src="img/Plaster.jpg"
+        repeat="4 1.8"
+        color="#516fa0"
+        position="0 2.5 -1.20"
+        width="11"
+        height="5"
+        rotation="0 180 0"
+      ></a-plane>
+
+      <a-plane
+        src="img/ceiling.png"
+        repeat="8 8"
+        position="0 5 -6.14"
+        width="10.5"
+        height="10"
+        rotation="90 0 0"
+      ></a-plane>
+
+
+      <a-plane
+        src="img/Plaster.jpg"
+        repeat="4 1.8"
+        color="#516fa0"
+        position="5.168 2.5 -6.14"
+        width="10"
+        height="5"
+        rotation="0 -90 0"
+      ></a-plane>
+
+      <a-box
+        src="img/Plaster.jpg"
+        repeat="4 1.8"
+        depth="0.4"
+        width="10"
+        height="4"
+        position="5.168 2 -6.14"
+        rotation="0 -90 0"
+      ></a-box>
+
+      <a-box
+        src="img/Plaster.jpg"
+        repeat="4 2"
+        depth="0.4"
+        width="6"
+        height="4"
+        position="2 2 -8.16"
+      ></a-box>
+
+      <a-box
+        color="#098EA8"
+        opacity="0.4"
+        gloss="1.2"
+        depth="0.05"
+        width="6"
+        height="5"
+        position="2 3 -8.16"
+      ></a-box>
+
+      <a-box
+        src="img/woodenbeams.jpg"
+        repeat="0.4 0.4"
+        width=".6"
+        depth=".6"
+        height="6"
+        position="-1 3 -8.16"
+      ></a-box>
+
+      <a-box
+        src="img/woodenbeams.jpg"
+        repeat="0.4 0.4"
+        width=".5"
+        depth=".3"
+        height="10"
+        rotation="90 0 0"
+        position="-4.75 1.25 -6.140"
+      ></a-box>
+
+      <a-box
+        src="img/woodenbeams.jpg"
+        repeat="0.4 0.4"
+        width=".5"
+        depth=".3"
+        height="10"
+        rotation="90 0 0"
+        position="-4.75 3.75 -6.140"
+      ></a-box>
+
+      <a-box
+        src="img/woodenbeams.jpg"
+        repeat="0.4 0.4"
+        width=".6"
+        depth=".6"
+        height="6"
+        position="4.7 3 -8.16"
+      ></a-box>
+
+     <a-light
+        type="spot"
+        position="0 4.5 -1.9"
+        rotation="-30 0 0"
+        intensity=".15"
+        angle="90"
+        decay=".5"
+      ></a-light>
+
+      <a-light
+        type="spot"
+        distance="3"
+        position="1.65 3.3 -6.5"
+        rotation="-40 0 0"
+        intensity=".75"
+        angle="30"
+      ></a-light>
+
+        <a-sky id="sky" color="#6666FF"></a-sky>
+
+        <a-camera id="camera" position="0 0 -2.2">
+      <a-entity id="cursor" cursor="fuse: true; fuseTimeout: 500"
+                position="0 0 -0.5"
+                geometry="primitive: ring; radiusInner: 0.005; radiusOuter: 0.01"
+                material="color: green; shader: flat">
+      </a-entity>
+    </a-camera>
+
+    </a-scene>
+  </body>
+</html>

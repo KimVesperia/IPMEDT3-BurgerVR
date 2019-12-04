@@ -1,0 +1,16 @@
+{
+  "burger": "510 kcal",
+  "vetBurger": "35.8 g vet",
+  "tomaat": "6 kcal",
+  "vetTomaat": "0.1 g vet",
+  "salade": "6 kcal",
+  "vetSalade": "0.1 g vet",
+  "tomaatANDsla": "522 kcal",
+  "vettomaatANDsla": "36 g vet",
+  "kaas": "74 kcal",
+  "vetKaas": "3.6 g vet",
+  "ketchup": "13 kcal",
+  "vetKetchup": "0 g vet",
+  "brood": "122 kcal",
+  "vetBrood": "0.8 g vet"
+}
